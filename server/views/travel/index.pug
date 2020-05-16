@@ -1,0 +1,15 @@
+extends ../layout/index
+block content
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src=`/img/destinos_${travelId.imagen}_ln.jpg`, class="img-fluid")
+            .col-md-7
+                h1 #{travelId.titulo}
+                p 
+                    i.fas.fa-calendar-alt
+                    |  #{travelId.fecha_ida} - #{travelId.fecha_vuelta}
+                p 
+                    i.fas.fa-dollar-sign
+                    |  #{travelId.disponibles} Disponibles
+                p=travelId.descripcion

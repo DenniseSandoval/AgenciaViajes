@@ -1,0 +1,15 @@
+.row.proximos-viajes
+            each travel in viajes
+                .col-md-6.col-lg-4.mb-4 
+                    .card   
+                        img(src=`img/destinos_${travel.imagen}.jpg`, class="img-fluid")
+                        .card_body
+                            h2=travel.titulo
+                            p 
+                                i.fas.fa-calendar-alt
+                                |  #{travel.fecha_ida} - #{travel.fecha_vuelta}
+                            p 
+                                i.fas.fa-dollar-sign
+                                |  #{travel.precio}
+                            p=travel.descripcion.substr(0,100)
+                            a(href=`travels/${travel.id}`,class="btn btn-success btn-block") Más Información
